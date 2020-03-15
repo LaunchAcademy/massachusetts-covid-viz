@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Form, Formik, Field } from "formik"
+import formatDailyData from "../lib/formatDailyData"
 import copy from "copy-to-clipboard"
 
 import counties from "../../data/counties"
@@ -29,8 +30,10 @@ const DailyDataForm = props => {
     <Formik
       initialValues={{
         date: "",
-        confirmed: 0,
-        presumptive: 0,
+        totalCases: {
+          confirmed: 0,
+          presumptive: 0,
+        },
         counties: countyDefaults,
         gender: {
           female: 0,
@@ -43,7 +46,7 @@ const DailyDataForm = props => {
         },
       }}
       onSubmit={(values, { setSubmitting }) => {
-        const result = JSON.stringify(values, null, 2)
+        const result = JSON.stringify(formatDailyData(values), null, 2)
         copy(result)
         setCopiedText("Copied.")
 
@@ -56,12 +59,22 @@ const DailyDataForm = props => {
           <Field as="input" type="date" name="date" id="date" />
         </div>
         <div>
-          <label htmlFor="confirmed">Confirmed Cases</label>
-          <Field as="input" type="number" name="confirmed" id="confirmed" />
+          <label htmlFor="totalCases.confirmed">Confirmed Cases</label>
+          <Field
+            as="input"
+            type="number"
+            name="totalCases.confirmed"
+            id="totalCases.confirmed"
+          />
         </div>
         <div>
-          <label htmlFor="presumptive">Presumptive Positive</label>
-          <Field as="input" type="number" name="presumptive" id="presumptive" />
+          <label htmlFor="totalCases.presumptive">Presumptive Positive</label>
+          <Field
+            as="input"
+            type="number"
+            name="totalCases.presumptive"
+            id="totalCases.presumptive"
+          />
         </div>
         {countyInputs}
         <div>

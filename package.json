@@ -10,6 +10,7 @@
     "@nivo/pie": "^0.61.1",
     "@nivo/waffle": "^0.61.1",
     "bootstrap": "4",
+    "fast-glob": "^3.2.2",
     "formik": "^2.1.4",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
