@@ -1,0 +1,31 @@
+{
+  "date": "2020-03-10",
+  "confirmed": 1,
+  "presumptive": 91,
+  "counties": {
+    "Barnstable": 0,
+    "Berkshire": 7,
+    "Bristol": 0,
+    "Dukes": 0,
+    "Essex": 1,
+    "Franklin": 0,
+    "Hampden": 0,
+    "Hampshire": 0,
+    "Middlesex": 41,
+    "Nantucket": 0,
+    "Norfolk": 22,
+    "Plymouth": 0,
+    "Suffolk": 20,
+    "Worcester": 1,
+    "Unknown": 0
+  },
+  "gender": {
+    "female": 40,
+    "male": 52
+  },
+  "hospitalizations": {
+    "hospitalized": 6,
+    "notHospitalized": 62,
+    "underInvestigation": 24
+  }
+}

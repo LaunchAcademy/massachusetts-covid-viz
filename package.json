@@ -5,6 +5,10 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@nivo/bar": "^0.61.1",
+    "@nivo/core": "^0.61.0",
+    "@nivo/pie": "^0.61.1",
+    "@nivo/waffle": "^0.61.1",
     "formik": "^2.1.4",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
