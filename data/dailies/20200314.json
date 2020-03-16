@@ -1,0 +1,70 @@
+{
+  "date": "2020-03-14",
+  "totalCases": {
+    "confirmed": 19,
+    "presumptive": 119
+  },
+  "countsByCounty": [
+    {
+      "county": "Barnstable",
+      "caseCount": 1
+    },
+    {
+      "county": "Berkshire",
+      "caseCount": 9
+    },
+    {
+      "county": "Bristol",
+      "caseCount": 1
+    },
+    {
+      "county": "Essex",
+      "caseCount": 5
+    },
+    {
+      "county": "Middlesex",
+      "caseCount": 65
+    },
+    {
+      "county": "Norfolk",
+      "caseCount": 28
+    },
+    {
+      "county": "Suffolk",
+      "caseCount": 27
+    },
+    {
+      "county": "Worcester",
+      "caseCount": 2
+    }
+  ],
+  "countsByGender": [
+    {
+      "id": "female",
+      "label": "female",
+      "value": 64
+    },
+    {
+      "id": "male",
+      "label": "male",
+      "value": 74
+    }
+  ],
+  "countsByHospitalization": [
+    {
+      "id": "hospitalized",
+      "label": "hospitalized",
+      "value": 11
+    },
+    {
+      "id": "notHospitalized",
+      "label": "notHospitalized",
+      "value": 105
+    },
+    {
+      "id": "underInvestigation",
+      "label": "underInvestigation",
+      "value": 22
+    }
+  ]
+}
