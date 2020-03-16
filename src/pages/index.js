@@ -37,7 +37,10 @@ const IndexPage = () => {
       </div>
       <div className="row">
         <div className="col-sm">
-          <h2>{totalCases.presumptive + totalCases.confirmed} Total Cases</h2>
+          <h2>
+            {format(new Date(dailyData.date + "T00:00:00"), "MM/dd/yyyy")} -{" "}
+            {totalCases.presumptive + totalCases.confirmed} Total Cases
+          </h2>
         </div>
       </div>
       <div className="row">
