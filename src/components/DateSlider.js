@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Slider, Rail, Handles, Tracks, Ticks } from "react-compound-slider"
-import { SliderRail, Handle, Track, Tick } from "./vendor/dateSlider" // example render components - source below
+import { SliderRail, KeyboardHandle, Track, Tick } from "./vendor/dateSlider" // example render components - source below
 import { startOfDay, differenceInCalendarDays, format } from "date-fns"
 import { scaleTime } from "d3-scale"
 
@@ -17,7 +17,7 @@ const DateSlider = props => {
   const dayStep = 1000 * 60 * 60 * 24
 
   const minDate = startOfDay(new Date(2020, 2, 10))
-  const maxDate = startOfDay(new Date(2020, 2, 11))
+  const maxDate = startOfDay(new Date(2020, 2, 15))
 
   const [dateSelected, setDateSelected] = useState(maxDate)
 
@@ -54,7 +54,7 @@ const DateSlider = props => {
           {({ handles, getHandleProps }) => (
             <div>
               {handles.map(handle => (
-                <Handle
+                <KeyboardHandle
                   key={handle.id}
                   handle={handle}
                   domain={[+minDate, +maxDate]}
