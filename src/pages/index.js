@@ -36,7 +36,20 @@ const IndexPage = () => {
         </div>
       </div>
       <div className="row">
-        <div className="col-sm" style={{ minHeight: 50 }}>
+        <div className="col-sm">
+          <h2>{totalCases.presumptive + totalCases.confirmed} Total Cases</h2>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-sm">
+          <h3>{totalCases.presumptive} Presumptive Cases</h3>
+        </div>
+        <div className="col-sm">
+          <h3>{totalCases.confirmed} Confirmed Cases</h3>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-sm" style={{ minHeight: 80 }}>
           <ResponsiveBar
             data={[
               {
@@ -47,16 +60,11 @@ const IndexPage = () => {
             keys={["presumptive", "confirmed"]}
             layers={["bars"]}
             indexBy="state"
-            margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+            maxValue={200}
             padding={0.3}
             layout="horizontal"
             colors={{ scheme: "nivo" }}
           />
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-sm">
-          <h2>By County</h2>
         </div>
       </div>
       <div className="row">
@@ -67,40 +75,59 @@ const IndexPage = () => {
             keys={["caseCount"]}
             layers={["bars", "axes"]}
             indexBy="county"
-            margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+            axisBottom={null}
+            margin={{ left: 120, bottom: 20 }}
             padding={0.3}
             layout="horizontal"
             anchor="center"
             colors={{ scheme: "nivo" }}
+            maxValue={100}
           />
         </div>
       </div>
-      <div className="row">
-        <div className="col-sm">
-          <h2>By Gender</h2>
-        </div>
-      </div>
-
       <div className="row">
         <div className="col-sm" style={{ maxHeight: 300 }}>
           <ResponsiveWaffle
             data={countsByGender}
-            total={92}
-            rows={5}
-            columns={10}
+            fillDirection="left"
+            rows={10}
+            columns={18}
+            total={180}
+            margin={{ top: 50, right: 10, bottom: 10, left: 10 }}
+            legends={[
+              {
+                anchor: "top",
+                direction: "row",
+                justify: false,
+                translateX: 0,
+                translateY: -36,
+                itemsSpacing: 4,
+                itemWidth: 100,
+                itemHeight: 20,
+                itemDirection: "left-to-right",
+                itemOpacity: 1,
+                itemTextColor: "#777",
+                symbolSize: 20,
+                effects: [
+                  {
+                    on: "hover",
+                    style: {
+                      itemTextColor: "#000",
+                      itemBackground: "#f7fafb",
+                    },
+                  },
+                ],
+              },
+            ]}
           />
           <br />
         </div>
-      </div>
-
-      <div className="row">
-        <div className="col-sm">
-          <h2>Hospitalizations</h2>
-        </div>
-      </div>
-      <div className="row">
         <div className="col-sm" style={{ maxHeight: 300 }}>
-          <ResponsivePie data={countsByHospitalization} innerRadius={0.5} />
+          <ResponsivePie
+            data={countsByHospitalization}
+            innerRadius={0.5}
+            margin={{ top: 50, bottom: 0, left: 50, right: 50 }}
+          />
           <br />
         </div>
       </div>

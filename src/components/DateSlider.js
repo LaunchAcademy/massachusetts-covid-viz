@@ -38,7 +38,7 @@ const DateSlider = props => {
   }, [dateSelected, props])
 
   return (
-    <div style={{ margin: "5%", height: 120, width: "90%" }}>
+    <div style={{ marginTop: 60, height: 60, width: "90%" }}>
       <Slider
         mode={1}
         step={dayStep}
