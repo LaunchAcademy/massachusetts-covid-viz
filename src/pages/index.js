@@ -1,15 +1,28 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import { format } from "date-fns"
 import { ResponsiveBar } from "@nivo/bar"
 import { ResponsiveWaffle } from "@nivo/waffle"
 import { ResponsivePie } from "@nivo/pie"
 import { Helmet } from "react-helmet"
+import compiledData from "../../data/dist/compiledData.json"
+import DateSlider from "../components/DateSlider"
 
 const IndexPage = () => {
+  const [dailyData, setDailyData] = useState(Object.values(compiledData)[0])
+  const {
+    totalCases,
+    countsByCounty,
+    countsByGender,
+    countsByHospitalization,
+  } = dailyData
+  const onDateSelected = date => {
+    setDailyData(compiledData[format(date, "yyyy-MM-dd")])
+  }
   return (
     <Layout>
       <Helmet>
@@ -18,13 +31,17 @@ const IndexPage = () => {
         <title>MA COVID-19 Data Visualization</title>
       </Helmet>
       <div className="row">
+        <div className="col-sm">
+          <DateSlider onDateSelected={onDateSelected} />
+        </div>
+      </div>
+      <div className="row">
         <div className="col-sm" style={{ minHeight: 50 }}>
           <ResponsiveBar
             data={[
               {
                 state: "MA",
-                presumptive: 91,
-                confirmed: 1,
+                ...totalCases,
               },
             ]}
             keys={["presumptive", "confirmed"]}
@@ -46,29 +63,7 @@ const IndexPage = () => {
         <div className="col-sm" style={{ maxHeight: 400 }}>
           &nbsp;
           <ResponsiveBar
-            data={[
-              {
-                county: "Barnstable",
-                caseCount: 0,
-              },
-              {
-                county: "Berkshire",
-                caseCount: 7,
-              },
-              { county: "Bristol", caseCount: 0 },
-              { county: "Dukes", caseCount: 0 },
-              { county: "Essex", caseCount: 1 },
-              { county: "Franklin", caseCount: 0 },
-              { county: "Hampden", caseCount: 0 },
-              { county: "Hampshire", caseCount: 0 },
-              { county: "Middlesex", caseCount: 41 },
-              { county: "Nantucket", caseCount: 0 },
-              { county: "Norfolk", caseCount: 22 },
-              { county: "Plymouth", caseCount: 0 },
-              { county: "Suffolk", caseCount: 20 },
-              { county: "Worcester", caseCount: 1 },
-              { county: "Unknown", caseCount: 0 },
-            ].filter(record => record.caseCount > 0)}
+            data={countsByCounty}
             keys={["caseCount"]}
             layers={["bars", "axes"]}
             indexBy="county"
@@ -89,20 +84,7 @@ const IndexPage = () => {
       <div className="row">
         <div className="col-sm" style={{ maxHeight: 300 }}>
           <ResponsiveWaffle
-            data={[
-              {
-                id: "male",
-                label: "male",
-                value: 40,
-                color: "#468df3",
-              },
-              {
-                id: "female",
-                label: "female",
-                value: 52,
-                color: "#ba72ff",
-              },
-            ]}
+            data={countsByGender}
             total={92}
             rows={5}
             columns={10}
@@ -118,26 +100,7 @@ const IndexPage = () => {
       </div>
       <div className="row">
         <div className="col-sm" style={{ maxHeight: 300 }}>
-          <ResponsivePie
-            data={[
-              {
-                id: "hospitalized",
-                label: "hospitalized",
-                value: 6,
-              },
-              {
-                id: "notHospitalized",
-                label: "Not Hospitalized",
-                value: 62,
-              },
-              {
-                id: "underInvestigation",
-                label: "Under Investigation",
-                value: 24,
-              },
-            ]}
-            innerRadius={0.5}
-          />
+          <ResponsivePie data={countsByHospitalization} innerRadius={0.5} />
           <br />
         </div>
       </div>

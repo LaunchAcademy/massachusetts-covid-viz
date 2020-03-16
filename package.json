@@ -10,6 +10,8 @@
     "@nivo/pie": "^0.61.1",
     "@nivo/waffle": "^0.61.1",
     "bootstrap": "4",
+    "d3-scale": "^3.2.1",
+    "date-fns": "^2.11.0",
     "fast-glob": "^3.2.2",
     "formik": "^2.1.4",
     "gatsby": "^2.19.7",
@@ -24,6 +26,7 @@
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
+    "react-compound-slider": "^2.5.0",
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1"
