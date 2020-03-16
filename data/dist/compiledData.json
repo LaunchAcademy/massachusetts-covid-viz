@@ -25,19 +25,9 @@
     ],
     "countsByHospitalization": [
       {
-        "id": "hospitalized",
-        "label": "hospitalized",
-        "value": 0
-      },
-      {
         "id": "notHospitalized",
         "label": "notHospitalized",
         "value": 1
-      },
-      {
-        "id": "underInvestigation",
-        "label": "underInvestigation",
-        "value": 0
       }
     ]
   },
@@ -67,19 +57,9 @@
     ],
     "countsByHospitalization": [
       {
-        "id": "hospitalized",
-        "label": "hospitalized",
-        "value": 0
-      },
-      {
         "id": "notHospitalized",
         "label": "notHospitalized",
         "value": 1
-      },
-      {
-        "id": "underInvestigation",
-        "label": "underInvestigation",
-        "value": 0
       }
     ]
   },
@@ -109,19 +89,9 @@
     ],
     "countsByHospitalization": [
       {
-        "id": "hospitalized",
-        "label": "hospitalized",
-        "value": 0
-      },
-      {
         "id": "notHospitalized",
         "label": "notHospitalized",
         "value": 1
-      },
-      {
-        "id": "underInvestigation",
-        "label": "underInvestigation",
-        "value": 0
       }
     ]
   },
@@ -155,19 +125,9 @@
     ],
     "countsByHospitalization": [
       {
-        "id": "hospitalized",
-        "label": "hospitalized",
-        "value": 0
-      },
-      {
         "id": "notHospitalized",
         "label": "notHospitalized",
         "value": 2
-      },
-      {
-        "id": "underInvestigation",
-        "label": "underInvestigation",
-        "value": 0
       }
     ]
   },
@@ -205,19 +165,9 @@
     ],
     "countsByHospitalization": [
       {
-        "id": "hospitalized",
-        "label": "hospitalized",
-        "value": 0
-      },
-      {
         "id": "notHospitalized",
         "label": "notHospitalized",
         "value": 8
-      },
-      {
-        "id": "underInvestigation",
-        "label": "underInvestigation",
-        "value": 0
       }
     ]
   },
@@ -259,19 +209,9 @@
     ],
     "countsByHospitalization": [
       {
-        "id": "hospitalized",
-        "label": "hospitalized",
-        "value": 0
-      },
-      {
         "id": "notHospitalized",
         "label": "notHospitalized",
         "value": 13
-      },
-      {
-        "id": "underInvestigation",
-        "label": "underInvestigation",
-        "value": 0
       }
     ]
   },
@@ -317,19 +257,9 @@
     ],
     "countsByHospitalization": [
       {
-        "id": "hospitalized",
-        "label": "hospitalized",
-        "value": 0
-      },
-      {
         "id": "notHospitalized",
         "label": "notHospitalized",
         "value": 28
-      },
-      {
-        "id": "underInvestigation",
-        "label": "underInvestigation",
-        "value": 0
       }
     ]
   },
@@ -374,11 +304,6 @@
       }
     ],
     "countsByHospitalization": [
-      {
-        "id": "hospitalized",
-        "label": "hospitalized",
-        "value": 0
-      },
       {
         "id": "notHospitalized",
         "label": "notHospitalized",

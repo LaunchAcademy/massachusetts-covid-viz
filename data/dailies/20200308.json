@@ -40,19 +40,9 @@
   ],
   "countsByHospitalization": [
     {
-      "id": "hospitalized",
-      "label": "hospitalized",
-      "value": 0
-    },
-    {
       "id": "notHospitalized",
       "label": "notHospitalized",
       "value": 28
-    },
-    {
-      "id": "underInvestigation",
-      "label": "underInvestigation",
-      "value": 0
     }
   ]
 }
