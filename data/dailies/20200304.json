@@ -1,0 +1,42 @@
+{
+  "date": "2020-03-04",
+  "totalCases": {
+    "confirmed": 0,
+    "presumptive": 1
+  },
+  "countsByCounty": [
+    {
+      "county": "Norfolk",
+      "caseCount": 1
+    }
+  ],
+  "countsByGender": [
+    {
+      "id": "female",
+      "label": "female",
+      "value": 1
+    },
+    {
+      "id": "male",
+      "label": "male",
+      "value": 0
+    }
+  ],
+  "countsByHospitalization": [
+    {
+      "id": "hospitalized",
+      "label": "hospitalized",
+      "value": 0
+    },
+    {
+      "id": "notHospitalized",
+      "label": "notHospitalized",
+      "value": 1
+    },
+    {
+      "id": "underInvestigation",
+      "label": "underInvestigation",
+      "value": 0
+    }
+  ]
+}

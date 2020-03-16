@@ -1,0 +1,58 @@
+{
+  "date": "2020-03-09",
+  "totalCases": {
+    "confirmed": 1,
+    "presumptive": 40
+  },
+  "countsByCounty": [
+    {
+      "county": "Berkshire",
+      "caseCount": 5
+    },
+    {
+      "county": "Middlesex",
+      "caseCount": 15
+    },
+    {
+      "county": "Norfolk",
+      "caseCount": 10
+    },
+    {
+      "county": "Suffolk",
+      "caseCount": 10
+    },
+    {
+      "county": "Worcester",
+      "caseCount": 1
+    }
+  ],
+  "countsByGender": [
+    {
+      "id": "female",
+      "label": "female",
+      "value": 18
+    },
+    {
+      "id": "male",
+      "label": "male",
+      "value": 23
+    }
+  ],
+  "countsByHospitalization": [
+    {
+      "id": "hospitalized",
+      "label": "hospitalized",
+      "value": 0
+    },
+    {
+      "id": "notHospitalized",
+      "label": "notHospitalized",
+      "value": 37
+    },
+    {
+      "id": "underInvestigation",
+      "label": "underInvestigation",
+      "value": 4
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "date": "2020-03-05",
+  "totalCases": {
+    "confirmed": 0,
+    "presumptive": 2
+  },
+  "countsByCounty": [
+    {
+      "county": "Middlesex",
+      "caseCount": 1
+    },
+    {
+      "county": "Norfolk",
+      "caseCount": 1
+    }
+  ],
+  "countsByGender": [
+    {
+      "id": "female",
+      "label": "female",
+      "value": 2
+    },
+    {
+      "id": "male",
+      "label": "male",
+      "value": 0
+    }
+  ],
+  "countsByHospitalization": [
+    {
+      "id": "hospitalized",
+      "label": "hospitalized",
+      "value": 0
+    },
+    {
+      "id": "notHospitalized",
+      "label": "notHospitalized",
+      "value": 2
+    },
+    {
+      "id": "underInvestigation",
+      "label": "underInvestigation",
+      "value": 0
+    }
+  ]
+}

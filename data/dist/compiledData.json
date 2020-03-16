@@ -1,4 +1,396 @@
 {
+  "2020-03-02": {
+    "date": "2020-03-02",
+    "totalCases": {
+      "confirmed": 0,
+      "presumptive": 1
+    },
+    "countsByCounty": [
+      {
+        "county": "Norfolk",
+        "caseCount": 1
+      }
+    ],
+    "countsByGender": [
+      {
+        "id": "female",
+        "label": "female",
+        "value": 1
+      },
+      {
+        "id": "male",
+        "label": "male",
+        "value": 0
+      }
+    ],
+    "countsByHospitalization": [
+      {
+        "id": "hospitalized",
+        "label": "hospitalized",
+        "value": 0
+      },
+      {
+        "id": "notHospitalized",
+        "label": "notHospitalized",
+        "value": 1
+      },
+      {
+        "id": "underInvestigation",
+        "label": "underInvestigation",
+        "value": 0
+      }
+    ]
+  },
+  "2020-03-03": {
+    "date": "2020-03-03",
+    "totalCases": {
+      "confirmed": 0,
+      "presumptive": 1
+    },
+    "countsByCounty": [
+      {
+        "county": "Norfolk",
+        "caseCount": 1
+      }
+    ],
+    "countsByGender": [
+      {
+        "id": "female",
+        "label": "female",
+        "value": 1
+      },
+      {
+        "id": "male",
+        "label": "male",
+        "value": 0
+      }
+    ],
+    "countsByHospitalization": [
+      {
+        "id": "hospitalized",
+        "label": "hospitalized",
+        "value": 0
+      },
+      {
+        "id": "notHospitalized",
+        "label": "notHospitalized",
+        "value": 1
+      },
+      {
+        "id": "underInvestigation",
+        "label": "underInvestigation",
+        "value": 0
+      }
+    ]
+  },
+  "2020-03-04": {
+    "date": "2020-03-04",
+    "totalCases": {
+      "confirmed": 0,
+      "presumptive": 1
+    },
+    "countsByCounty": [
+      {
+        "county": "Norfolk",
+        "caseCount": 1
+      }
+    ],
+    "countsByGender": [
+      {
+        "id": "female",
+        "label": "female",
+        "value": 1
+      },
+      {
+        "id": "male",
+        "label": "male",
+        "value": 0
+      }
+    ],
+    "countsByHospitalization": [
+      {
+        "id": "hospitalized",
+        "label": "hospitalized",
+        "value": 0
+      },
+      {
+        "id": "notHospitalized",
+        "label": "notHospitalized",
+        "value": 1
+      },
+      {
+        "id": "underInvestigation",
+        "label": "underInvestigation",
+        "value": 0
+      }
+    ]
+  },
+  "2020-03-05": {
+    "date": "2020-03-05",
+    "totalCases": {
+      "confirmed": 0,
+      "presumptive": 2
+    },
+    "countsByCounty": [
+      {
+        "county": "Middlesex",
+        "caseCount": 1
+      },
+      {
+        "county": "Norfolk",
+        "caseCount": 1
+      }
+    ],
+    "countsByGender": [
+      {
+        "id": "female",
+        "label": "female",
+        "value": 2
+      },
+      {
+        "id": "male",
+        "label": "male",
+        "value": 0
+      }
+    ],
+    "countsByHospitalization": [
+      {
+        "id": "hospitalized",
+        "label": "hospitalized",
+        "value": 0
+      },
+      {
+        "id": "notHospitalized",
+        "label": "notHospitalized",
+        "value": 2
+      },
+      {
+        "id": "underInvestigation",
+        "label": "underInvestigation",
+        "value": 0
+      }
+    ]
+  },
+  "2020-03-06": {
+    "date": "2020-03-06",
+    "totalCases": {
+      "confirmed": 1,
+      "presumptive": 7
+    },
+    "countsByCounty": [
+      {
+        "county": "Middlesex",
+        "caseCount": 1
+      },
+      {
+        "county": "Norfolk",
+        "caseCount": 3
+      },
+      {
+        "county": "Suffolk",
+        "caseCount": 4
+      }
+    ],
+    "countsByGender": [
+      {
+        "id": "female",
+        "label": "female",
+        "value": 5
+      },
+      {
+        "id": "male",
+        "label": "male",
+        "value": 3
+      }
+    ],
+    "countsByHospitalization": [
+      {
+        "id": "hospitalized",
+        "label": "hospitalized",
+        "value": 0
+      },
+      {
+        "id": "notHospitalized",
+        "label": "notHospitalized",
+        "value": 8
+      },
+      {
+        "id": "underInvestigation",
+        "label": "underInvestigation",
+        "value": 0
+      }
+    ]
+  },
+  "2020-03-07": {
+    "date": "2020-03-07",
+    "totalCases": {
+      "confirmed": 1,
+      "presumptive": 12
+    },
+    "countsByCounty": [
+      {
+        "county": "Berkshire",
+        "caseCount": 1
+      },
+      {
+        "county": "Middlesex",
+        "caseCount": 5
+      },
+      {
+        "county": "Norfolk",
+        "caseCount": 3
+      },
+      {
+        "county": "Suffolk",
+        "caseCount": 4
+      }
+    ],
+    "countsByGender": [
+      {
+        "id": "female",
+        "label": "female",
+        "value": 7
+      },
+      {
+        "id": "male",
+        "label": "male",
+        "value": 6
+      }
+    ],
+    "countsByHospitalization": [
+      {
+        "id": "hospitalized",
+        "label": "hospitalized",
+        "value": 0
+      },
+      {
+        "id": "notHospitalized",
+        "label": "notHospitalized",
+        "value": 13
+      },
+      {
+        "id": "underInvestigation",
+        "label": "underInvestigation",
+        "value": 0
+      }
+    ]
+  },
+  "2020-03-08": {
+    "date": "2020-03-08",
+    "totalCases": {
+      "confirmed": 1,
+      "presumptive": 27
+    },
+    "countsByCounty": [
+      {
+        "county": "Berkshire",
+        "caseCount": 1
+      },
+      {
+        "county": "Middlesex",
+        "caseCount": 10
+      },
+      {
+        "county": "Norfolk",
+        "caseCount": 7
+      },
+      {
+        "county": "Suffolk",
+        "caseCount": 9
+      },
+      {
+        "county": "Unknown",
+        "caseCount": 1
+      }
+    ],
+    "countsByGender": [
+      {
+        "id": "female",
+        "label": "female",
+        "value": 14
+      },
+      {
+        "id": "male",
+        "label": "male",
+        "value": 14
+      }
+    ],
+    "countsByHospitalization": [
+      {
+        "id": "hospitalized",
+        "label": "hospitalized",
+        "value": 0
+      },
+      {
+        "id": "notHospitalized",
+        "label": "notHospitalized",
+        "value": 28
+      },
+      {
+        "id": "underInvestigation",
+        "label": "underInvestigation",
+        "value": 0
+      }
+    ]
+  },
+  "2020-03-09": {
+    "date": "2020-03-09",
+    "totalCases": {
+      "confirmed": 1,
+      "presumptive": 40
+    },
+    "countsByCounty": [
+      {
+        "county": "Berkshire",
+        "caseCount": 5
+      },
+      {
+        "county": "Middlesex",
+        "caseCount": 15
+      },
+      {
+        "county": "Norfolk",
+        "caseCount": 10
+      },
+      {
+        "county": "Suffolk",
+        "caseCount": 10
+      },
+      {
+        "county": "Worcester",
+        "caseCount": 1
+      }
+    ],
+    "countsByGender": [
+      {
+        "id": "female",
+        "label": "female",
+        "value": 18
+      },
+      {
+        "id": "male",
+        "label": "male",
+        "value": 23
+      }
+    ],
+    "countsByHospitalization": [
+      {
+        "id": "hospitalized",
+        "label": "hospitalized",
+        "value": 0
+      },
+      {
+        "id": "notHospitalized",
+        "label": "notHospitalized",
+        "value": 37
+      },
+      {
+        "id": "underInvestigation",
+        "label": "underInvestigation",
+        "value": 4
+      }
+    ]
+  },
   "2020-03-10": {
     "date": "2020-03-10",
     "totalCases": {
