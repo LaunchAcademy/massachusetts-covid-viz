@@ -80,7 +80,7 @@ const IndexPage = () => {
             indexBy="county"
             axisBottom={null}
             margin={{ left: 120, bottom: 20 }}
-            padding={0.3}
+            padding={0.1}
             layout="horizontal"
             anchor="center"
             colors={{ scheme: "nivo" }}
