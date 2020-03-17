@@ -7,10 +7,13 @@
   "dependencies": {
     "@nivo/bar": "^0.61.1",
     "@nivo/core": "^0.61.0",
+    "@nivo/geo": "^0.61.1",
     "@nivo/legends": "^0.61.1",
     "@nivo/pie": "^0.61.1",
     "@nivo/waffle": "^0.61.1",
     "bootstrap": "4",
+    "d3": "^5.15.0",
+    "d3-geo-projection": "^2.8.1",
     "d3-scale": "^3.2.1",
     "date-fns": "^2.11.0",
     "fast-glob": "^3.2.2",
@@ -31,9 +34,11 @@
     "react-compound-slider": "^2.5.0",
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-simple-maps": "^1.0.0-beta.0"
   },
   "devDependencies": {
+    "@turf/transform-scale": "^5.1.5",
     "eslint-config-react-app": "^5.2.0",
     "prettier": "^1.19.1"
   },

@@ -8,6 +8,7 @@ import { format } from "date-fns"
 import { ResponsiveBar } from "@nivo/bar"
 import { ResponsiveWaffle } from "@nivo/waffle"
 import { ResponsivePie } from "@nivo/pie"
+import CountyMap from "../components/CountyMap"
 import { Helmet } from "react-helmet"
 import compiledData from "../../data/dist/compiledData.json"
 import DateSlider from "../components/DateSlider"
@@ -73,19 +74,7 @@ const IndexPage = () => {
       <div className="row">
         <div className="col-sm" style={{ maxHeight: 400 }}>
           &nbsp;
-          <ResponsiveBar
-            data={countsByCounty}
-            keys={["caseCount"]}
-            layers={["bars", "axes"]}
-            indexBy="county"
-            axisBottom={null}
-            margin={{ left: 120, bottom: 20 }}
-            padding={0.1}
-            layout="horizontal"
-            anchor="center"
-            colors={{ scheme: "nivo" }}
-            maxValue={100}
-          />
+          <CountyMap countsByCounty={countsByCounty} />
         </div>
       </div>
       <div className="row">
