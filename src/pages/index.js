@@ -83,8 +83,8 @@ const IndexPage = () => {
             data={countsByGender}
             fillDirection="left"
             rows={10}
-            columns={18}
-            total={180}
+            columns={20}
+            total={200}
             margin={{ top: 50, right: 10, bottom: 10, left: 10 }}
             legends={[
               {
