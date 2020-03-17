@@ -72,13 +72,16 @@ const IndexPage = () => {
         </div>
       </div>
       <div className="row">
-        <div className="col-sm" style={{ maxHeight: 400 }}>
+        <div
+          className="offset-sm-0 col-sm-12 col-md-6 offset-md-3"
+          style={{ maxHeight: 400, textAlign: "center" }}
+        >
           &nbsp;
-          <CountyMap countsByCounty={countsByCounty} />
+          <CountyMap align="center" countsByCounty={countsByCounty} />
         </div>
       </div>
       <div className="row">
-        <div className="col-sm" style={{ maxHeight: 300 }}>
+        <div className="col-sm-6" style={{ maxHeight: 300 }}>
           <ResponsiveWaffle
             data={countsByGender}
             fillDirection="left"
@@ -114,7 +117,7 @@ const IndexPage = () => {
           />
           <br />
         </div>
-        <div className="col-sm" style={{ maxHeight: 300 }}>
+        <div className="col-sm-6" style={{ maxHeight: 300 }}>
           <ResponsivePie
             data={countsByHospitalization}
             innerRadius={0.5}
