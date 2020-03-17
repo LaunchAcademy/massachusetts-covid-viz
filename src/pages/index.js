@@ -21,9 +21,32 @@ const IndexPage = () => {
     countsByGender,
     countsByHospitalization,
   } = dailyData
+  const themeProps = {
+    theme: {
+      tooltip: {
+        container: {
+          background: "#333",
+        },
+      },
+    },
+  }
   const onDateSelected = date => {
     setDailyData(compiledData[format(date, "yyyy-MM-dd")])
   }
+
+  const dates = Object.keys(compiledData)
+  const minDateString = dates[0]
+  const maxDateString = dates[dates.length - 1]
+  const [minDate, maxDate] = [minDateString, maxDateString].map(
+    str => new Date(`${str}T00:00:00`)
+  )
+  const { presumptive: maxPresumptive, confirmed: maxConfirmed } = compiledData[
+    maxDateString
+  ].totalCases
+  const maxTotalCases = maxPresumptive + maxConfirmed
+
+  const sumCases = totalCases.presumptive + totalCases.confirmed
+  console.log(sumCases / maxTotalCases)
   return (
     <Layout>
       <Helmet>
@@ -33,27 +56,27 @@ const IndexPage = () => {
       </Helmet>
       <div className="row">
         <div className="col-sm">
-          <DateSlider onDateSelected={onDateSelected} />
+          <DateSlider
+            onDateSelected={onDateSelected}
+            minDate={minDate}
+            maxDate={maxDate}
+          />
         </div>
       </div>
-      <div className="row">
-        <div className="col-sm">
+      <div className="row panel">
+        <div className="col-sm-12">
           <h2>
             {format(new Date(dailyData.date + "T00:00:00"), "MM/dd/yyyy")} -{" "}
-            {totalCases.presumptive + totalCases.confirmed} Total Cases
+            {sumCases} Total Cases
           </h2>
         </div>
-      </div>
-      <div className="row">
-        <div className="col-sm">
+        <div className="col-sm-6">
           <h3>{totalCases.presumptive} Presumptive Cases</h3>
         </div>
-        <div className="col-sm">
+        <div className="col-sm-6">
           <h3>{totalCases.confirmed} Confirmed Cases</h3>
         </div>
-      </div>
-      <div className="row">
-        <div className="col-sm" style={{ minHeight: 80 }}>
+        <div className="col-sm-12" style={{ minHeight: 50 }}>
           <ResponsiveBar
             data={[
               {
@@ -61,33 +84,38 @@ const IndexPage = () => {
                 ...totalCases,
               },
             ]}
+            background={"#000"}
             keys={["presumptive", "confirmed"]}
             layers={["bars"]}
             indexBy="state"
-            maxValue={200}
-            padding={0.3}
+            maxValue={maxTotalCases}
             layout="horizontal"
             colors={{ scheme: "nivo" }}
+            {...themeProps}
           />
         </div>
       </div>
-      <div className="row">
+      <div className="row panel">
         <div
           className="offset-sm-0 col-sm-12 col-md-6 offset-md-3"
-          style={{ maxHeight: 400, textAlign: "center" }}
+          style={{ maxHeight: 300, textAlign: "center" }}
         >
           &nbsp;
-          <CountyMap align="center" countsByCounty={countsByCounty} />
+          <CountyMap
+            align="center"
+            countsByCounty={countsByCounty}
+            {...themeProps}
+          />
         </div>
       </div>
-      <div className="row">
-        <div className="col-sm-6" style={{ maxHeight: 300 }}>
+      <div className="row has-subpanels">
+        <div className="col-sm-6 panel" style={{ maxHeight: 300 }}>
           <ResponsiveWaffle
             data={countsByGender}
             fillDirection="left"
-            rows={10}
+            rows={maxTotalCases / 20 + 1}
             columns={20}
-            total={200}
+            total={maxTotalCases}
             margin={{ top: 50, right: 10, bottom: 10, left: 10 }}
             legends={[
               {
@@ -114,14 +142,20 @@ const IndexPage = () => {
                 ],
               },
             ]}
+            {...themeProps}
           />
           <br />
         </div>
-        <div className="col-sm-6" style={{ maxHeight: 300 }}>
+        <div
+          className="col-sm-6 panel"
+          style={{ textAlign: "center", maxHeight: 300 }}
+        >
           <ResponsivePie
             data={countsByHospitalization}
-            innerRadius={0.5}
+            enableRadialLabels={false}
+            width={150 + 150 * (sumCases / maxTotalCases)}
             margin={{ top: 50, bottom: 0, left: 50, right: 50 }}
+            {...themeProps}
           />
           <br />
         </div>

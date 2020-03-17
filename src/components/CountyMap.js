@@ -4,9 +4,9 @@ import { ResponsiveChoropleth } from "@nivo/geo"
 import countyData from "../../data/mapbox.json"
 
 const CountyMap = props => {
-  const { countsByCounty } = props
+  const { countsByCounty, theme = {} } = props
   return (
-    <div style={{ width: 400, height: 300, textAlign: "center" }}>
+    <div style={{ width: 400, height: 225, textAlign: "center" }}>
       <ResponsiveChoropleth
         features={countyData.features}
         height={300}
@@ -16,10 +16,11 @@ const CountyMap = props => {
         })}
         domain={[0, 50]}
         projectionRotation={[73, 0, 0]}
-        projectionTranslation={[0.12, 15.4]}
+        projectionTranslation={[0.23, 15.2]}
         projectionScale={5500}
         enableGraticule={false}
         borderWidth={0.5}
+        theme={theme}
       />
     </div>
   )

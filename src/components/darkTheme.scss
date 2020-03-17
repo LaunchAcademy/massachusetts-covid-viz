@@ -1,0 +1,36 @@
+body {
+  color: white;
+  background-color: black;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+}
+
+div.panel {
+  background-color: #111;
+  border: 1px solid #333;
+  margin: 0 0 0.8rem;
+}
+
+div.row.has-subpanels {
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 0.9rem;
+}
+
+div.row.panel {
+  padding: 0.9rem 0;
+}
+
+.tooltip {
+  background-color: black !important;
+}

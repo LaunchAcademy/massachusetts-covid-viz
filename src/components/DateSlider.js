@@ -16,8 +16,7 @@ function formatTick(ms) {
 const DateSlider = props => {
   const dayStep = 1000 * 60 * 60 * 24
 
-  const minDate = startOfDay(new Date(2020, 2, 2))
-  const maxDate = startOfDay(new Date(2020, 2, 16))
+  const { minDate, maxDate } = props
 
   const [dateSelected, setDateSelected] = useState(maxDate)
 
