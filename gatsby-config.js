@@ -1,8 +1,13 @@
 module.exports = {
   siteMetadata: {
     title: `Massachusetts COVID-19 Data Visualization`,
-    description: `An experiment with D3`,
-    author: `@dpickett`,
+    author: `@launchacademy`,
+    description:
+      "Interactive Massachusetts COVID-19 Tracker. An experiment with ReactJS and D3",
+    url: "https://ma-covid-19-tracker.launchacademy.com",
+    image: "/screenshot.png",
+    twitterUsername: "@launchacademy",
+    author: "Launch Academy",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -35,6 +40,12 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/launch-logo.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-social-cards`],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

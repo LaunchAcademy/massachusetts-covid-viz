@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import { format, parse } from "date-fns"
 import { ResponsiveWaffle } from "@nivo/waffle"
 import { ResponsivePie } from "@nivo/pie"
+import SEO from "../components/seo"
 import { Helmet } from "react-helmet"
 
 import Layout from "../components/layout"
@@ -54,6 +55,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
+      <SEO />
       <Helmet>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

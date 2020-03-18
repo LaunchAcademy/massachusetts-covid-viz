@@ -16,8 +16,11 @@ function SEO({ description, lang, meta, title }) {
       query {
         site {
           siteMetadata {
-            title
-            description
+            defaultTitle: title
+            defaultDescription: description
+            siteUrl: url
+            defaultImage: image
+            twitterUsername
             author
           }
         }
@@ -25,23 +28,34 @@ function SEO({ description, lang, meta, title }) {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.defaultDescription
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={title || site.siteMetadata.defaultTitle}
       meta={[
+        {
+          name: "image",
+          content: site.siteMetadata.defaultImage,
+        },
+        {
+          name: "og:image",
+          content: site.siteMetadata.defaultImage,
+        },
+        {
+          name: "twitter:image",
+          content: site.siteMetadata.defaultImage,
+        },
         {
           name: `description`,
           content: metaDescription,
         },
         {
           property: `og:title`,
-          content: title,
+          content: title || site.siteMetadata.defaultTitle,
         },
         {
           property: `og:description`,
@@ -57,11 +71,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: site.siteMetadata.twitterUsername,
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: title || site.siteMetadata.defaultTitle,
         },
         {
           name: `twitter:description`,

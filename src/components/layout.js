@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
-        <a className="navbar-brand d-none d-xs-block " href="#">
+        <a className="navbar-brand d-none d-sm-block" href="#">
           <span class="navbar-brand mb-0 h1">
             Massachusetts COVID-19 Tracker
           </span>
