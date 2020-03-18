@@ -2,7 +2,7 @@ import React from "react"
 import { format } from "date-fns"
 import { ResponsiveBar } from "@nivo/bar"
 import pluralize from "pluralize"
-const StatewideCounts = ({ date, data, maxTotalCases, themeProps }) => {
+const StatewideCounts = ({ date, data, maxTotalCases, ...themeProps }) => {
   const { presumptive, confirmed } = data
   const sumCases = presumptive + confirmed
   let presumptiveBreakdown
