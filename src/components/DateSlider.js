@@ -18,7 +18,7 @@ const DateSlider = props => {
 
   const { minDate, maxDate } = props
 
-  const [dateSelected, setDateSelected] = useState(minDate)
+  const [dateSelected, setDateSelected] = useState(maxDate)
 
   const onUpdate = ([ms]) => {
     //triggers a known issue: https://github.com/sghall/react-compound-slider/issues/110 - dealing with the warning for now
