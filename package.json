@@ -17,7 +17,7 @@
     "@nivo/pie": "^0.61.1",
     "@nivo/waffle": "^0.61.1",
     "@primer/octicons-react": "^9.6.0",
-    "bootstrap": "4",
+    "bootstrap": ">= 4.3.1",
     "d3": "^5.15.0",
     "d3-geo-projection": "^2.8.1",
     "d3-scale": "^3.2.1",
