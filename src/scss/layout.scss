@@ -2,7 +2,8 @@
 @import "./darkTheme.scss";
 
 h2,
-h3 {
+h3,
+h4 {
   text-align: center;
 }
 
@@ -15,4 +16,8 @@ footer li {
   display: inline-block;
   vertical-align: middle;
   padding: 15px;
+}
+
+.case-summary strong {
+  font-size: 2.8rem;
 }

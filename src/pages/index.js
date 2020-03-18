@@ -1,14 +1,13 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 import { format } from "date-fns"
-import { ResponsiveBar } from "@nivo/bar"
 import { ResponsiveWaffle } from "@nivo/waffle"
 import { ResponsivePie } from "@nivo/pie"
-import CountyMap from "../components/CountyMap"
 import { Helmet } from "react-helmet"
+
+import Layout from "../components/layout"
+import StatewideCounts from "../components/charts/StatewideCounts"
+import CountyMap from "../components/CountyMap"
 import compiledData from "../../data/dist/compiledData.json"
 import DateSlider from "../components/DateSlider"
 
@@ -43,8 +42,9 @@ const IndexPage = () => {
     maxDateString
   ].totalCases
   const maxTotalCases = maxPresumptive + maxConfirmed
-
   const sumCases = totalCases.presumptive + totalCases.confirmed
+  const selectedDate = new Date(`${dailyData.date}T00:00:00`)
+
   return (
     <Layout>
       <Helmet>
@@ -62,36 +62,12 @@ const IndexPage = () => {
         </div>
       </div>
       <div className="row panel">
-        <div className="col-sm-12">
-          <h2>
-            {format(new Date(dailyData.date + "T00:00:00"), "MM/dd/yyyy")} -{" "}
-            {sumCases} Total Cases
-          </h2>
-        </div>
-        <div className="col-sm-6">
-          <h3>{totalCases.presumptive} Presumptive Cases</h3>
-        </div>
-        <div className="col-sm-6">
-          <h3>{totalCases.confirmed} Confirmed Cases</h3>
-        </div>
-        <div className="col-sm-12" style={{ minHeight: 50 }}>
-          <ResponsiveBar
-            data={[
-              {
-                state: "MA",
-                ...totalCases,
-              },
-            ]}
-            background={"#000"}
-            keys={["presumptive", "confirmed"]}
-            layers={["bars"]}
-            indexBy="state"
-            maxValue={maxTotalCases}
-            layout="horizontal"
-            colors={{ scheme: "nivo" }}
-            {...themeProps}
-          />
-        </div>
+        <StatewideCounts
+          data={dailyData.totalCases}
+          date={selectedDate}
+          maxTotalCases={maxTotalCases}
+          {...themeProps}
+        />
       </div>
       <div className="row panel">
         <div
