@@ -83,7 +83,7 @@ const Layout = ({ children }) => {
             social distancing.
           </h4>
           <p>
-            Data is updated daily and source from the{" "}
+            Data is updated daily and sourced from the{" "}
             <a href="https://www.mass.gov/orgs/department-of-public-health">
               Massachusetts DPH
             </a>
