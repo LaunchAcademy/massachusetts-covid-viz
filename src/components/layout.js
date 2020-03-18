@@ -20,7 +20,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons"
 
-import "./layout.scss"
+import "../scss/layout.scss"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
