@@ -1,0 +1,86 @@
+{
+  "date": "2020-03-18",
+  "totalCases": {
+    "confirmed": 256,
+    "presumptive": 0
+  },
+  "countsByCounty": [
+    {
+      "county": "Barnstable",
+      "caseCount": 2
+    },
+    {
+      "county": "Berkshire",
+      "caseCount": 17
+    },
+    {
+      "county": "Bristol",
+      "caseCount": 5
+    },
+    {
+      "county": "Essex",
+      "caseCount": 14
+    },
+    {
+      "county": "Franklin",
+      "caseCount": 1
+    },
+    {
+      "county": "Hampden",
+      "caseCount": 2
+    },
+    {
+      "county": "Middlesex",
+      "caseCount": 100
+    },
+    {
+      "county": "Norfolk",
+      "caseCount": 45
+    },
+    {
+      "county": "Plymouth",
+      "caseCount": 5
+    },
+    {
+      "county": "Suffolk",
+      "caseCount": 51
+    },
+    {
+      "county": "Worcester",
+      "caseCount": 10
+    },
+    {
+      "county": "Unknown",
+      "caseCount": 4
+    }
+  ],
+  "countsByGender": [
+    {
+      "id": "female",
+      "label": "female",
+      "value": 119
+    },
+    {
+      "id": "male",
+      "label": "male",
+      "value": 137
+    }
+  ],
+  "countsByHospitalization": [
+    {
+      "id": "hospitalized",
+      "label": "hospitalized",
+      "value": 27
+    },
+    {
+      "id": "notHospitalized",
+      "label": "notHospitalized",
+      "value": 151
+    },
+    {
+      "id": "underInvestigation",
+      "label": "underInvestigation",
+      "value": 78
+    }
+  ]
+}
