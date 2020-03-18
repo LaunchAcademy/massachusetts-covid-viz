@@ -16,16 +16,16 @@ export default props => {
     }
   `)
   return (
-    <ul className="navbar-nav mt-2 mt-lg-0">
+    <ul className="navbar-nav">
       <li className="nav-item">
         <a
-          className="nav-link"
+          className="nav-link d-none d-sm-block"
           href="https://github.com/LaunchAcademy/massachusetts-covid-viz"
         >
           <Octicon icon={MarkGithub} size="medium" />
         </a>
       </li>
-      <li className="nav-item">
+      <li className="nav-item d-sm-inline-block">
         <a className="nav-link" href="https://launchacademy.com">
           <Img fixed={data.file.childImageSharp.fixed} />
         </a>
