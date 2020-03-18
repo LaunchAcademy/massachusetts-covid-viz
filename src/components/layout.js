@@ -78,18 +78,18 @@ const Layout = ({ children }) => {
             work-from-home-friendly career!
           </p>
 
-          <ul class="social">
-            <li>
+          <ul class="social row">
+            <li className="offset-sm-3 col-sm-1">
               <a href="https://instagram.com/launchacademy">
                 <FontAwesomeIcon icon={faInstagram} size={footerIconSize} />
               </a>
             </li>
-            <li>
+            <li className="col-sm-1">
               <a href="https://twitter.com/launchacademy">
                 <FontAwesomeIcon icon={faTwitter} size={footerIconSize} />
               </a>
             </li>
-            <li>
+            <li className="col-sm-2">
               <a href="https://launchacademy.com">
                 <Img
                   fixed={data.file.childImageSharp.fixed}
@@ -97,12 +97,12 @@ const Layout = ({ children }) => {
                 />
               </a>
             </li>
-            <li>
+            <li className="col-sm-1">
               <a href="https://www.youtube.com/channel/UCV9y37nUk5aQH_uNRGEtKZw">
                 <FontAwesomeIcon icon={faYoutube} size={footerIconSize} />
               </a>
             </li>
-            <li>
+            <li className="col-sm-1">
               <a href="https://facebook.com/TheLaunchAcademy">
                 <FontAwesomeIcon icon={faFacebook} size={footerIconSize} />
               </a>

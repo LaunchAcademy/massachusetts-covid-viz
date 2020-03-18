@@ -13,10 +13,18 @@ h6 {
   color: white;
 }
 
-div.panel {
-  background-color: #111;
-  border: 1px solid #333;
-  margin: 0 0 0.8rem;
+@media (min-width: 376px) {
+  div.panel {
+    background-color: #111;
+    border: 1px solid #333;
+    margin: 0 0 0.8rem;
+  }
+}
+@media (max-width: 375px) {
+  div.panel {
+    padding: 5px 0;
+    border-bottom: 1px solid #333;
+  }
 }
 
 div.row.has-subpanels {
