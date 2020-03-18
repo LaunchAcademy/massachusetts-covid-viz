@@ -36,7 +36,7 @@ footer li {
 }
 
 .hospitalizations {
-  padding: 20px 0;
+  padding: 15px 0;
   li {
     vertical-align: middle;
     list-style: none;
@@ -50,10 +50,12 @@ footer li {
   }
 
   li strong {
-    font-size: 2.2rem;
-    margin: 0 0.4rem 0 2.2rem;
+    font-size: 1.8rem;
+
+    margin: 0 0.4rem 0 1.4rem;
   }
-  li span {
+
+  li div {
     vertical-align: middle;
     font-size: 1.3rem;
   }

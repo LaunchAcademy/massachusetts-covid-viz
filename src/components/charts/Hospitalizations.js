@@ -17,11 +17,13 @@ const iconMap = {
 const Hospitalizations = ({ data }) => {
   const listItems = data.map(record => {
     return (
-      <li key={record.id}>
-        <FontAwesomeIcon icon={iconMap[record.id]} size={"4x"} fixedWidth />
-        <span>
+      <li key={record.id} className="media">
+        <div>
+          <FontAwesomeIcon icon={iconMap[record.id]} size={"4x"} fixedWidth />
+        </div>
+        <div className="media-body">
           <strong>{record.value}</strong> {humanFriendlyMap[record.id]}
-        </span>
+        </div>
       </li>
     )
   })

@@ -90,7 +90,7 @@ const IndexPage = () => {
         </div>
       </div>
       <div className="row has-subpanels">
-        <div className="col-sm-6 panel" style={{ maxHeight: 300 }}>
+        <div className="col-sm-6 panel" style={{ maxHeight: 350 }}>
           <ResponsiveWaffle
             data={countsByGender}
             fillDirection="left"
@@ -129,7 +129,7 @@ const IndexPage = () => {
         </div>
         <div
           className="col-sm-6 panel"
-          style={{ textAlign: "center", maxHeight: 300 }}
+          style={{ textAlign: "center", maxHeight: 350 }}
         >
           <Hospitalizations
             data={countsByHospitalization}
