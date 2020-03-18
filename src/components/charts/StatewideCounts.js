@@ -5,6 +5,25 @@ import pluralize from "pluralize"
 const StatewideCounts = ({ date, data, maxTotalCases, themeProps }) => {
   const { presumptive, confirmed } = data
   const sumCases = presumptive + confirmed
+  let presumptiveBreakdown
+  if (presumptive > 0) {
+    presumptiveBreakdown = (
+      <>
+        <div className="col-sm-6 case-summary">
+          <h3>
+            <strong>{presumptive}</strong> Presumptive{" "}
+            {pluralize("Case", presumptive)}
+          </h3>
+        </div>
+        <div className="col-sm-6 case-summary">
+          <h3>
+            <strong>{confirmed}</strong> Confirmed{" "}
+            {pluralize("Case", confirmed)}
+          </h3>
+        </div>
+      </>
+    )
+  }
   return (
     <>
       <div className="col-sm-12 case-summary">
@@ -13,17 +32,7 @@ const StatewideCounts = ({ date, data, maxTotalCases, themeProps }) => {
           <strong>{sumCases}</strong>
         </h2>
       </div>
-      <div className="col-sm-6 case-summary">
-        <h3>
-          <strong>{presumptive}</strong> Presumptive{" "}
-          {pluralize("Case", presumptive)}
-        </h3>
-      </div>
-      <div className="col-sm-6 case-summary">
-        <h3>
-          <strong>{confirmed}</strong> Confirmed {pluralize("Case", confirmed)}
-        </h3>
-      </div>
+      {presumptiveBreakdown}
       <div className="col-sm-12" style={{ minHeight: 50 }}>
         <ResponsiveBar
           data={[
