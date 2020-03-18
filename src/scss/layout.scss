@@ -18,6 +18,19 @@ footer li {
   padding: 15px;
 }
 
-.case-summary strong {
+.case-summary h2 strong {
   font-size: 2.8rem;
+}
+
+.case-summary h3 strong {
+  font-size: 2.4rem;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 0.2rem;
+  padding-top: 0.1rem;
+}
+
+.case-summary h3 {
+  font-size: 1.4rem;
+  vertical-align: middle;
 }

@@ -31,13 +31,13 @@ const DateSlider = props => {
     .map(d => +d)
 
   useEffect(() => {
-    if (props.onDateSelected) {
+    if (props.onDateSelected && dateSelected) {
       props.onDateSelected(dateSelected)
     }
   }, [dateSelected, props])
 
   return (
-    <div style={{ marginTop: 60, height: 60, width: "90%" }}>
+    <div style={{ marginTop: 60, height: 60 }}>
       <Slider
         mode={1}
         step={dayStep}

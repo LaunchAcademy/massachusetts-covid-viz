@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-import { format } from "date-fns"
+import { format, parse } from "date-fns"
 import { ResponsiveWaffle } from "@nivo/waffle"
 import { ResponsivePie } from "@nivo/pie"
 import { Helmet } from "react-helmet"
@@ -10,6 +10,9 @@ import StatewideCounts from "../components/charts/StatewideCounts"
 import CountyMap from "../components/CountyMap"
 import compiledData from "../../data/dist/compiledData.json"
 import DateSlider from "../components/DateSlider"
+
+const dateFormat = "yyyy-MM-dd"
+const now = new Date()
 
 const IndexPage = () => {
   const [dailyData, setDailyData] = useState(Object.values(compiledData)[0])
@@ -29,21 +32,24 @@ const IndexPage = () => {
     },
   }
   const onDateSelected = date => {
-    setDailyData(compiledData[format(date, "yyyy-MM-dd")])
+    if (date) {
+      const formattedDate = format(date, dateFormat)
+      setDailyData(compiledData[formattedDate])
+    }
   }
 
   const dates = Object.keys(compiledData)
   const minDateString = dates[0]
   const maxDateString = dates[dates.length - 1]
-  const [minDate, maxDate] = [minDateString, maxDateString].map(
-    str => new Date(`${str}T00:00:00`)
+  const [minDate, maxDate] = [minDateString, maxDateString].map(str =>
+    parse(str, dateFormat, now)
   )
   const { presumptive: maxPresumptive, confirmed: maxConfirmed } = compiledData[
     maxDateString
   ].totalCases
   const maxTotalCases = maxPresumptive + maxConfirmed
   const sumCases = totalCases.presumptive + totalCases.confirmed
-  const selectedDate = new Date(`${dailyData.date}T00:00:00`)
+  const selectedDate = parse(`${dailyData.date}`, dateFormat, now)
 
   return (
     <Layout>

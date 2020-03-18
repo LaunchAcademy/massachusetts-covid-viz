@@ -7,20 +7,21 @@ const StatewideCounts = ({ date, data, maxTotalCases, themeProps }) => {
   const sumCases = presumptive + confirmed
   return (
     <>
-      <div className="col-sm-12">
+      <div className="col-sm-12 case-summary">
         <h4>Total Cases as of {format(date, "MM/dd/yyyy")}</h4>
-        <h2 className="case-summary">
+        <h2>
           <strong>{sumCases}</strong>
         </h2>
       </div>
-      <div className="col-sm-6">
+      <div className="col-sm-6 case-summary">
         <h3>
-          {presumptive} Presumptive {pluralize("Case", presumptive)}
+          <strong>{presumptive}</strong> Presumptive{" "}
+          {pluralize("Case", presumptive)}
         </h3>
       </div>
-      <div className="col-sm-6">
+      <div className="col-sm-6 case-summary">
         <h3>
-          {confirmed} Confirmed {pluralize("Case", confirmed)}
+          <strong>{confirmed}</strong> Confirmed {pluralize("Case", confirmed)}
         </h3>
       </div>
       <div className="col-sm-12" style={{ minHeight: 50 }}>
