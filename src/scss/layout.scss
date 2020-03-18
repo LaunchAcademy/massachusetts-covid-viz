@@ -34,3 +34,27 @@ footer li {
   font-size: 1.4rem;
   vertical-align: middle;
 }
+
+.hospitalizations {
+  padding: 20px 0;
+  li {
+    vertical-align: middle;
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  li svg {
+    vertical-align: middle;
+  }
+
+  li strong {
+    font-size: 2.2rem;
+    margin: 0 0.4rem 0 2.2rem;
+  }
+  li span {
+    vertical-align: middle;
+    font-size: 1.3rem;
+  }
+}

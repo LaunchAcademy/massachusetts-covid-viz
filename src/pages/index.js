@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet"
 
 import Layout from "../components/layout"
 import StatewideCounts from "../components/charts/StatewideCounts"
+import Hospitalizations from "../components/charts/Hospitalizations"
 import CountyMap from "../components/CountyMap"
 import compiledData from "../../data/dist/compiledData.json"
 import DateSlider from "../components/DateSlider"
@@ -130,12 +131,9 @@ const IndexPage = () => {
           className="col-sm-6 panel"
           style={{ textAlign: "center", maxHeight: 300 }}
         >
-          <ResponsivePie
+          <Hospitalizations
             data={countsByHospitalization}
-            enableRadialLabels={false}
-            width={150 + 150 * (sumCases / maxTotalCases)}
-            margin={{ top: 50, bottom: 0, left: 50, right: 50 }}
-            {...themeProps}
+            maxTotalCases={maxTotalCases}
           />
           <br />
         </div>
