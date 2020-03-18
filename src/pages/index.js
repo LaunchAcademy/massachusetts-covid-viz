@@ -46,7 +46,6 @@ const IndexPage = () => {
   const maxTotalCases = maxPresumptive + maxConfirmed
 
   const sumCases = totalCases.presumptive + totalCases.confirmed
-  console.log(sumCases / maxTotalCases)
   return (
     <Layout>
       <Helmet>
