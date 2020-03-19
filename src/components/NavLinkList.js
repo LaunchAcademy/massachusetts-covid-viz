@@ -28,7 +28,7 @@ export default props => {
       <li className="nav-item d-sm-inline-block">
         <a
           className="nav-link"
-          href="http://launchacademy.com/building-a-covid-19-tracker-learn-how-we-built-it-and-how-to-build-something-that-matters/"
+          href="https://launchacademy.com/building-a-covid-19-tracker-learn-how-we-built-it-and-how-to-build-something-that-matters/"
         >
           <Img fixed={data.file.childImageSharp.fixed} />
         </a>
