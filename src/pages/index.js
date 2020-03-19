@@ -12,6 +12,7 @@ import Hospitalizations from "../components/charts/Hospitalizations"
 import CountyMap from "../components/CountyMap"
 import compiledData from "../../data/dist/compiledData.json"
 import DateSlider from "../components/DateSlider"
+import CaseCountHistory from "../components/charts/CaseCountHistory"
 
 const dateFormat = "yyyy-MM-dd"
 const now = new Date()
@@ -26,6 +27,7 @@ const IndexPage = () => {
   } = dailyData
   const themeProps = {
     theme: {
+      textColor: "#fff",
       tooltip: {
         container: {
           background: "#333",
@@ -50,7 +52,6 @@ const IndexPage = () => {
     maxDateString
   ].totalCases
   const maxTotalCases = maxPresumptive + maxConfirmed
-  const sumCases = totalCases.presumptive + totalCases.confirmed
   const selectedDate = parse(`${dailyData.date}`, dateFormat, now)
 
   return (
@@ -139,6 +140,9 @@ const IndexPage = () => {
           />
           <br />
         </div>
+      </div>
+      <div className="row panel">
+        <CaseCountHistory data={compiledData} {...themeProps} />
       </div>
     </Layout>
   )
