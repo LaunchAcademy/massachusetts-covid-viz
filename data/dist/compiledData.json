@@ -970,40 +970,48 @@
       }
     ]
   },
-  "2020-03-19": {
-    "date": "2020-03-19",
+  "2020-03-20": {
+    "date": "2020-03-20",
     "totalCases": {
-      "confirmed": 218,
+      "confirmed": 328,
       "presumptive": 0
     },
     "countsByCounty": [
       {
         "county": "Barnstable",
-        "caseCount": 2
-      },
-      {
-        "county": "Berkshire",
-        "caseCount": 14
-      },
-      {
-        "county": "Bristol",
         "caseCount": 5
       },
       {
+        "county": "Berkshire",
+        "caseCount": 18
+      },
+      {
+        "county": "Bristol",
+        "caseCount": 6
+      },
+      {
         "county": "Essex",
-        "caseCount": 8
+        "caseCount": 19
+      },
+      {
+        "county": "Franklin",
+        "caseCount": 1
       },
       {
         "county": "Hampden",
+        "caseCount": 3
+      },
+      {
+        "county": "Hampshire",
         "caseCount": 1
       },
       {
         "county": "Middlesex",
-        "caseCount": 89
+        "caseCount": 119
       },
       {
         "county": "Norfolk",
-        "caseCount": 43
+        "caseCount": 52
       },
       {
         "county": "Plymouth",
@@ -1011,44 +1019,44 @@
       },
       {
         "county": "Suffolk",
-        "caseCount": 42
+        "caseCount": 72
       },
       {
         "county": "Worcester",
-        "caseCount": 8
+        "caseCount": 14
       },
       {
         "county": "Unknown",
-        "caseCount": 1
+        "caseCount": 13
       }
     ],
     "countsByGender": [
       {
         "id": "female",
         "label": "female",
-        "value": 102
+        "value": 159
       },
       {
         "id": "male",
         "label": "male",
-        "value": 116
+        "value": 169
       }
     ],
     "countsByHospitalization": [
       {
         "id": "hospitalized",
         "label": "hospitalized",
-        "value": 21
+        "value": 43
       },
       {
         "id": "notHospitalized",
         "label": "notHospitalized",
-        "value": 145
+        "value": 160
       },
       {
         "id": "underInvestigation",
         "label": "underInvestigation",
-        "value": 52
+        "value": 125
       }
     ]
   }
