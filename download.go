@@ -13,10 +13,11 @@ import (
 
 func main() {
 	t := time.Now()
-	pdfURL := fmt.Sprintf("https://www.mass.gov/doc/covid-19-cases-in-massachusetts-as-of-%s-%v-%v/download", t.Month(), zeroPad(strconv.Itoa(t.Day())), t.Year())
+	pdfURL := fmt.Sprintf("https://www.mass.gov/doc/covid-19-cases-in-Massachusetts-as-of-%s-%v-%v/download", t.Month(), zeroPad(strconv.Itoa(t.Day())), t.Year())
 
 	fileName := getDateFileName(t)
 
+	println("Attempting to download " + pdfURL)
 	if err := downloadFile("./data/dailySourceData/"+fileName, pdfURL); err != nil {
 		panic(err)
 	}
