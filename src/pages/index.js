@@ -13,6 +13,7 @@ import CountyMap from "../components/CountyMap"
 import compiledData from "../../data/dist/compiledData.json"
 import DateSlider from "../components/DateSlider"
 import CaseCountHistory from "../components/charts/CaseCountHistory"
+import CountsByGender from "../components/charts/CountsByGender"
 
 const dateFormat = "yyyy-MM-dd"
 const now = new Date()
@@ -94,40 +95,7 @@ const IndexPage = () => {
       </div>
       <div className="row has-subpanels">
         <div className="col-sm-6 panel" style={{ maxHeight: 350 }}>
-          <ResponsiveWaffle
-            data={countsByGender}
-            fillDirection="left"
-            rows={maxTotalCases / 20 + 1}
-            columns={20}
-            total={maxTotalCases}
-            margin={{ top: 50, right: 10, bottom: 10, left: 10 }}
-            legends={[
-              {
-                anchor: "top",
-                direction: "row",
-                justify: false,
-                translateX: 0,
-                translateY: -36,
-                itemsSpacing: 4,
-                itemWidth: 100,
-                itemHeight: 20,
-                itemDirection: "left-to-right",
-                itemOpacity: 1,
-                itemTextColor: "#777",
-                symbolSize: 20,
-                effects: [
-                  {
-                    on: "hover",
-                    style: {
-                      itemTextColor: "#000",
-                      itemBackground: "#f7fafb",
-                    },
-                  },
-                ],
-              },
-            ]}
-            {...themeProps}
-          />
+          <CountsByGender countsByGender={countsByGender} />
           <br />
         </div>
         <div
