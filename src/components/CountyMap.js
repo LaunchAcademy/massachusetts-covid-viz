@@ -3,6 +3,7 @@ import { ResponsiveChoropleth } from "@nivo/geo"
 
 import countyData from "../../data/mapbox.json"
 import counties from "../../data/counties"
+import _ from "lodash"
 
 const CountyMap = props => {
   const { countsByCounty, theme = {} } = props
@@ -12,6 +13,7 @@ const CountyMap = props => {
   const records = countsByCounty.map(record => {
     return { id: record.county, value: record.caseCount }
   })
+  const countyMax = _.maxBy(records, record => record.value).value
 
   // const countiesNotInData = _.difference(counties, countiesInData)
   // const zeroedRecords = countiesNotInData.reduce((records, county) => {
@@ -27,7 +29,7 @@ const CountyMap = props => {
         height={300}
         colors="YlOrRd"
         data={records}
-        domain={[0, 50]}
+        domain={[0, countyMax]}
         projectionRotation={[73, 0, 0]}
         projectionTranslation={[0.13, 15.2]}
         projectionScale={5500}
