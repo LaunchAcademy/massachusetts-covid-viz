@@ -1,0 +1,98 @@
+{
+  "date": "2020-04-05",
+  "totalCases": {
+    "confirmed": 12500,
+    "presumptive": 0
+  },
+  "countsByCounty": [
+    {
+      "county": "Barnstable",
+      "caseCount": 347
+    },
+    {
+      "county": "Berkshire",
+      "caseCount": 258
+    },
+    {
+      "county": "Bristol",
+      "caseCount": 659
+    },
+    {
+      "county": "Dukes",
+      "caseCount": 8
+    },
+    {
+      "county": "Essex",
+      "caseCount": 1506
+    },
+    {
+      "county": "Franklin",
+      "caseCount": 100
+    },
+    {
+      "county": "Hampden",
+      "caseCount": 768
+    },
+    {
+      "county": "Hampshire",
+      "caseCount": 128
+    },
+    {
+      "county": "Middlesex",
+      "caseCount": 2632
+    },
+    {
+      "county": "Nantucket",
+      "caseCount": 9
+    },
+    {
+      "county": "Norfolk",
+      "caseCount": 1271
+    },
+    {
+      "county": "Plymouth",
+      "caseCount": 963
+    },
+    {
+      "county": "Suffolk",
+      "caseCount": 2658
+    },
+    {
+      "county": "Worcester",
+      "caseCount": 978
+    },
+    {
+      "county": "Unknown",
+      "caseCount": 215
+    }
+  ],
+  "countsByGender": [
+    {
+      "id": "female",
+      "label": "female",
+      "value": 6528
+    },
+    {
+      "id": "male",
+      "label": "male",
+      "value": 5901
+    }
+  ],
+  "countsByHospitalization": [
+    {
+      "id": "hospitalized",
+      "label": "hospitalized",
+      "value": 1145
+    },
+    {
+      "id": "notHospitalized",
+      "label": "notHospitalized",
+      "value": 3675
+    },
+    {
+      "id": "underInvestigation",
+      "label": "underInvestigation",
+      "value": 7680
+    }
+  ]
+}
