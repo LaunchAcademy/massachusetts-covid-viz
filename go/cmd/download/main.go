@@ -16,7 +16,7 @@ import (
 func main() {
 	t := time.Now()
 	// https: //www.mass.gov/doc/covid-19-dashboard-april-20-2020/download
-	pdfURL := fmt.Sprintf("https://www.mass.gov/doc/covid-19-dashboard-%s-%v-%v/download", strings.ToLower(t.Month().String()), strconv.Itoa(t.Day()), t.Year())
+	pdfURL := fmt.Sprintf("https://www.mass.gov/doc/covid-19-dashboard-%s-%v-%v/download", strings.ToLower(t.Month().String()), strconv.Itoa(t.Day()-1), t.Year())
 
 	fileName := tracker.GetDateFileName(t, "pdf")
 	path := "../data/dailySourceData/" + fileName

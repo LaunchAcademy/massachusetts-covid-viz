@@ -16,7 +16,7 @@ func ZeroPad(value string) string {
 
 // GetDateFileName get the relevant file name for the provided date
 func GetDateFileName(t time.Time, ext string) string {
-	datePartInts := [3]int{t.Year(), int(t.Month()), t.Day()}
+	datePartInts := [3]int{t.Year(), int(t.Month()), t.Day() - 1}
 	datePartStrings := []string{}
 	for _, datePart := range datePartInts {
 		datePartString := ZeroPad(strconv.Itoa(datePart))
