@@ -10,12 +10,12 @@ import (
 	"os/exec"
 	"strconv"
 	"strings"
-	"time"
 )
 
 func main() {
-	t := time.Now()
 	// https: //www.mass.gov/doc/covid-19-dashboard-april-20-2020/download
+
+	t := tracker.GetDate()
 	pdfURL := fmt.Sprintf("https://www.mass.gov/doc/covid-19-dashboard-%s-%v-%v/download", strings.ToLower(t.Month().String()), strconv.Itoa(t.Day()), t.Year())
 
 	fileName := tracker.GetDateFileName(t, "pdf")

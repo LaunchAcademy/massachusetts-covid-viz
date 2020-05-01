@@ -1,6 +1,7 @@
 package tracker
 
 import (
+	"os"
 	"strconv"
 	"strings"
 	"time"
@@ -23,4 +24,13 @@ func GetDateFileName(t time.Time, ext string) string {
 		datePartStrings = append(datePartStrings, datePartString)
 	}
 	return strings.Join(datePartStrings, "") + "." + ext
+}
+
+// GetDate will determine what day we're working on
+func GetDate() time.Time {
+	t := time.Now()
+	if os.Getenv("YESTERDAY") != "" {
+		t = t.AddDate(0, 0, -1)
+	}
+	return t
 }

@@ -4,13 +4,12 @@ import (
 	"macovid/tracker"
 	"os"
 	"os/exec"
-	"time"
 
 	"github.com/atotto/clipboard"
 )
 
 func main() {
-	t := time.Now()
+	t := tracker.GetDate()
 	contents, copyErr := clipboard.ReadAll()
 	if copyErr != nil {
 		panic("Couldn't copy")
